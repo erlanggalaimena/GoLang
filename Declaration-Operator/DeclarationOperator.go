@@ -16,4 +16,7 @@ func main() {
 
 	y := 100 + 24
 	fmt.Println(y)
+
+	z := "Erlangga Laimena"
+	fmt.Println(z)
 }
