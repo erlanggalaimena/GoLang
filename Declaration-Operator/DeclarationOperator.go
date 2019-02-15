@@ -40,4 +40,7 @@ func main() {
 	fmt.Println(city)
 	fmt.Println(example)
 	fmt.Println(example2)
+
+	//print type of variable
+	fmt.Printf("%s %T\n", "Data-Type of variable example is : ", example)
 }
