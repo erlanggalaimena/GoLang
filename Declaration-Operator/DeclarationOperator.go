@@ -19,6 +19,8 @@ type laimena int
 //assign my Data-Type to variable 'example3'
 var example3 laimena
 
+var example4 int
+
 func main() {
 	//First declaration of new variable must use ":=" operator
 	x := 24
@@ -61,4 +63,13 @@ func main() {
 	example3 = 20
 	fmt.Println(example3)
 	fmt.Printf("%T\n", example3)
+	fmt.Println("------------------")
+	fmt.Println()
+
+	//convert from Data-Type 'laimena' to 'int'
+	example4 = int(example3)
+	fmt.Println(example4)
+	fmt.Printf("%T\n", example4)
+	fmt.Println("------------------")
+	fmt.Println()
 }
