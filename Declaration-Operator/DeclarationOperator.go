@@ -43,4 +43,5 @@ func main() {
 
 	//print type of variable
 	fmt.Printf("%s %T\n", "Data-Type of variable example is : ", example)
+	fmt.Printf("%s %T\n", "Data-Type of variable example2 is : ", example2)
 }
