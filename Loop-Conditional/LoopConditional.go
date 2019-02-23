@@ -45,4 +45,14 @@ func main() {
 
 		fmt.Println(y)
 	}
+	fmt.Println("------------------------")
+
+	//implementation of "if" and "inizialitation statement"
+	if l := 18; l > 20 {
+		fmt.Println("more than 20")
+	} else if l == 20 {
+		fmt.Println("equal to 20")
+	} else {
+		fmt.Println("less than 20")
+	}
 }
