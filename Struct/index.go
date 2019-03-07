@@ -3,29 +3,53 @@ package main
 import "fmt"
 
 type person struct {
-	first_name string
-	last_name  string
-	age        int
+	firstName string
+	lastName  string
+	age       int
+}
+
+type secretAgent struct {
+	person
+	ltk bool
 }
 
 func main() {
 	p1 := person{
-		first_name: "Erlangga",
-		last_name:  "laimena",
-		age:        23,
+		firstName: "Erlangga",
+		lastName:  "laimena",
+		age:       23,
 	}
 
 	p2 := person{
-		first_name: "irvi",
-		last_name:  "ramadhani",
-		age:        24,
+		firstName: "irvi",
+		lastName:  "ramadhani",
+		age:       24,
 	}
 
-	fmt.Println(p1)
-	fmt.Println(p2)
+	sa1 := secretAgent{
+		person: p1,
+		ltk:    true,
+	}
+
+	sa2 := secretAgent{
+		person: p2,
+		ltk:    false,
+	}
+
+	fmt.Println(sa1.firstName, sa1.lastName, sa1.age, sa1.ltk)
+	fmt.Println(sa2.firstName, sa2.lastName, sa2.age, sa2.ltk)
 	fmt.Println("------------------------")
 
-	fmt.Println(p1.first_name)
-	fmt.Println(p2.last_name)
-	fmt.Println(p1.age)
+	//Anonymous struck
+	pa := struct {
+		gender    string
+		firstName string
+		lastName  string
+	}{
+		gender:    "male",
+		firstName: "Erlangga",
+		lastName:  "Laimena",
+	}
+
+	fmt.Println(pa.gender, pa.firstName, pa.lastName)
 }
