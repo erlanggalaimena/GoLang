@@ -14,6 +14,10 @@ func main() {
 
 	fmt.Println(witcher, status)
 	fmt.Println(witcher2, status2)
+	fmt.Println("------------------------")
+
+	sum := sumNumbers(1, 2, 3, 4, 5, 6, 7, 8, 9)
+	fmt.Println(sum)
 }
 
 func foo() {
@@ -38,4 +42,14 @@ func isWitcher(name string) (string, bool) {
 	}
 
 	return result1, result2
+}
+
+//function with "variadic parameter"
+func sumNumbers(input ...int) int {
+	result := 0
+	for _, v := range input {
+		result += v
+	}
+
+	return result
 }
