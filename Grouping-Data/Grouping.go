@@ -112,15 +112,25 @@ func main() {
 	fmt.Println(m)
 	fmt.Println(m["James Bond"])
 	fmt.Println(m["james bond"])
+	fmt.Println()
 
 	//'comma ok' idiom
 	v, ok := m["james bond"]
 	fmt.Println(v)
 	fmt.Println(ok)
+	fmt.Println()
 
-	if v, ok := m["James Bond"]; ok {
+	if v, ok := m["James Bond"]; ok == true {
 		fmt.Println(v)
+		fmt.Println(ok)
 	}
+
+	if _, ok := m["james bond"]; ok == false {
+		fmt.Println(v)
+		fmt.Println(ok)
+	}
+
+	fmt.Println("------------------------")
 
 	//Add new element to map
 	m["Erlangga"] = 24
