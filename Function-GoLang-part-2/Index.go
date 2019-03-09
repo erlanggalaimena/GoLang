@@ -142,7 +142,7 @@ func incrementor() func() int {
 func factorial(input int) int {
 	if input == 1 {
 		return 1
-	} else {
-		return input * factorial(input-1)
 	}
+
+	return input * factorial(input-1)
 }
