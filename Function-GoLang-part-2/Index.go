@@ -73,7 +73,8 @@ func main() {
 	//because incrementor evaluate from first line method until end line of method incrementor
 
 	//recursion
-	fmt.Print(factorial(4))
+	fmt.Println(factorial(4))
+	fmt.Println(loopFact(4))
 }
 
 //returning func
@@ -145,4 +146,15 @@ func factorial(input int) int {
 	}
 
 	return input * factorial(input-1)
+}
+
+func loopFact(input int) int {
+	result := 1
+
+	for input > 1 {
+		result *= input
+		input--
+	}
+
+	return result
 }
